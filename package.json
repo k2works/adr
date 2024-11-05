@@ -1,13 +1,13 @@
 {
-  "name": "adr",
+  "name": "@k2works/adr",
   "version": "1.5.2",
-  "description": "轻量级架构记录工具 - Command-line tools for working with Architecture Decision Records",
+  "description": "軽量なアーキテクチャ決定記録ツール - Command-line tools for working with Architecture Decision Records",
   "main": "build/main/index.js",
   "bin": "build/main/cli.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/phodal/adr",
-  "author": "Phodal HUANG <h@phodal.com>",
+  "repository": "https://github.com/k2works/adr",
+  "author": "k2works <kakimomokuri@gmail.com>",
   "license": "MIT",
   "scripts": {
     "info": "npm-scripts-info",
@@ -31,7 +31,11 @@
     "release": "yarn reset && yarn test && yarn docs:publish && yarn changelog",
     "reset": "git clean -dfx && git reset --hard && yarn",
     "cli": "node build/main/cli.js",
-    "copy:template": "copyfiles -f ./src/lib/helpers/*.html ./build/main/lib/helpers/ && copyfiles -f ./src/lib/helpers/*.html ./build/module/lib/helpers/"
+    "copy:template": "copyfiles -f ./src/lib/helpers/*.html ./build/main/lib/helpers/ && copyfiles -f ./src/lib/helpers/*.html ./build/module/lib/helpers/",
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version major",
+    "release:npm": "npm publish --access public"
   },
   "scripts-info": {
     "info": "Display information about the scripts",
