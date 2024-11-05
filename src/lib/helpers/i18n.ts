@@ -121,6 +121,23 @@ export function getI18n() {
       },
       language,
     },
+    ja: {
+      decision: "決定",
+      Status: "状態",
+      statusStr: "提案中/承認済み/完了/非推奨/後継",
+      modifiedDate: "最終更新日",
+      lastStatus: "最終状態",
+      logSavePath: "保存パス:",
+      tocHeader: "アーキテクチャ決定記録",
+      status: {
+        proposed: "提案中",
+        accepted: "承認済み",
+        done: "完了",
+        deprecated: "非推奨",
+        superseded: "後継",
+      },
+      language,
+    },
   };
 
   return I18N[language];
