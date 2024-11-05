@@ -1,6 +1,6 @@
 {
   "name": "@k2works/adr",
-  "version": "1.6.1",
+  "version": "1.7.0",
   "description": "軽量なアーキテクチャ決定記録ツール - Command-line tools for working with Architecture Decision Records",
   "main": "build/main/index.js",
   "bin": "build/main/cli.js",
