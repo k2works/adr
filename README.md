@@ -1,11 +1,7 @@
-ADR - Architecture Decision Records（轻量级架构决策记录工具）
+ADR - Architecture Decision Records（軽量なアーキテクチャ決定記録ツール）
 ===
 
-> ADR - Architecture Decision Records（轻量级架构决策记录工具）
-
-[![Build Status](https://travis-ci.org/phodal/adr.svg?branch=master)](https://travis-ci.org/phodal/adr) [![codecov.io](https://codecov.io/github/phodal/adr/coverage.svg?branch=master)](https://codecov.io/github/phodal/adr?branch=master)  [![Maintainability](https://api.codeclimate.com/v1/badges/5cd05f9857e0a2031ba1/maintainability)](https://codeclimate.com/github/phodal/adr/maintainability)
-
-[![Markdown Improve](https://img.shields.io/badge/markdown--improve-Phodal-blue.svg)](https://github.com/phodal/markdown-improve) [![node](https://img.shields.io/node/v/adr.svg)](https://www.npmjs.com/package/adr) [![npm](https://img.shields.io/npm/v/adr.svg)](https://www.npmjs.com/adr)
+[ADR - Architecture Decision Records（轻量级架构决策记录工具）](https://github.com/phodal/adr)日本語対応版
 
 Inspired by [https://github.com/npryce/adr-tools](https://github.com/npryce/adr-tools), but supported Windows.
 
@@ -15,95 +11,73 @@ A good material about [Architecture decision record](https://github.com/joelpark
 
 中文翻译：[架构决策记录](https://www.phodal.com/blog/documenting-architecture-decisions/)
 
-**功能特性**
 
-- 支持 Windows, GNU/Linux, Mac OS
-- Markdown 目录生成
-- 为项目经理、业务人员等非开发人员，生成报表：HTML，CSV, JSON
-- 兼容 adr-tools
-- 国际化支持：English、中文、Brazilian Portuguese (pt-br), Standard Italian (it-IT)
-- 状态历史
-- 状态查询
-- 更好的列表展示
-- 兼容 adr-tools
-
-[查看本项目的架构决策记录](/docs/adr)
-
-**Features**
-
+**機能特性**
+- Windows, GNU/Linux, Mac OSをサポート
+- Markdown 目次生成
+- プロジェクトマネージャーやビジネスアナリストなど開発者ではない人向けのレポート生成：HTML, CSV, JSON
+- adr-toolsと互換性あり
+- 多言語対応：英語（English）、中国語（中文）、ブラジルポルトガル語（pt-br）、標準イタリア語（it-IT）、日本語（ja）
+- ステータス履歴
+- ステータス検索
+- 改良されたリスト表示
+- adr-toolsと互換性あり
+  [本プロジェクトのアーキテクチャ決定記録を見る](/docs/adr)
+  **Features**
 - Supported Windows, GNU/Linux, Mac OS
 - **report for PM, BA**: html, csv, json
 - Support Markdown and Asciidoc
 - generate markdown and asciidoc toc（see in [docs/adr](/docs/adr) ）
-- **i18n**: English (en), 中文(zh-cn), Brazilian Portuguese (pt-br), Standard Italian (it-IT), Farsi (fa), French (fr)
+- **i18n**: English (en), 中文(zh-cn), Brazilian Portuguese (pt-br), Standard Italian (it-IT), Farsi (fa), French (fr), Japanese (ja)
 - status logs
 - status query
 - better list view
 - compatible adr-tools
 - custom templates: add a `template.md` (or `template.adoc`, `template.asciidoc`) file in the save path
-
 ## HTML Reporter Example
-
 - [ADR Example](https://phodal.github.io/adr/examples/export-1.html)
 - [ADR Tools Example](https://phodal.github.io/adr/examples/export-3.html)
 - [会分期 Example](https://phodal.github.io/adr/examples/export-2.html)
 - [Arachne Framework Example](https://phodal.github.io/adr/examples/export-4.html)
-
-Screenshots
+  Screenshots
 ---
-
 ### ADR List
-
 ![List Examples](docs/list-example.png)
-
 ### ADR Reporter
-
 ![Reporter Examples](docs/reporter-example.png)
-
 ## Install
-
 1. install
-
 ```bash
 npm install -g adr
 ```
-
 2. init
-
 ```bash
 adr init <language>
 ```
-
 e.x: ``adr init en``
-
 ### new
-
 ```bash
 adr new <decision>
 ```
-
 e.x: ``adr new "create project"``. It will open the new file with your config [editor](#config)
-
 ### list
-
 ```bash
 adr list
 ```
-
 result:
 
 ```
 ╔══════════════════════════════════════╤══════════════╤═══════════════════╗
-║ Decision                             │ Last Modified│ Last Status       ║
+║ 決定                                    │ 最終更新日   │ 最終状態            ║
 ╟──────────────────────────────────────┼──────────────┼───────────────────╢
-║ 1.编写完整的单元测试                    │ 2017-11-26   │ 2017-11-26 已完成  ║
+║ 1. 完全な単体テストを書く                 │ 2017-11-26   │ 2017-11-26 完了     ║
 ╟──────────────────────────────────────┼──────────────┼───────────────────╢
-║ 2.添加目录生成                         │ 2017-11-26   │ 2017-11-25 已完成  ║
+║ 2. 目次生成の追加                       │ 2017-11-26   │ 2017-11-25 完了     ║
 ╟──────────────────────────────────────┼──────────────┼───────────────────╢
-║ 3.图形生成功能                         │ 2017-11-26   │ 2017-11-24 已完成  ║
+║ 3. 図形生成機能                         │ 2017-11-26   │ 2017-11-24 完了     ║
 ╟──────────────────────────────────────┼──────────────┼───────────────────╢
-║ 4.生成在线图形                         │ 2017-11-26   │ 2017-11-22 提议    ║
-╚══════════════════════════════════════╧══════════════╧═══════════════════╝
+║ 4. オンライン図形生成                   │ 2017-11-26   │ 2017-11-22 提案     ║
+╚══════════════════════════════════════╧══════════════╧═══════════════════╝╝
 ```
 
 ### generate toc
@@ -115,11 +89,10 @@ adr generate toc
 results:
 
 ```markdown
-# Architecture Decision Records
-
-* [1. 编写完整的单元测试](001-编写完整的单元测试.md)
-* [2. 添加目录生成](002-添加目录生成.md)
-* [3. 图形生成](003-图形生成.md)
+# アーキテクチャ決定記録
+* [1. 完全な単体テストを書く](001-完全な単体テストを書く.md)
+* [2. 目次生成の追加](002-目次生成の追加.md)
+* [3. 図形生成](003-図形生成.md))
 ```
 
 ### generate graph
@@ -133,10 +106,10 @@ results:
 ```
 digraph {
   node [shape=plaintext];
-  _1 [label="1.编写完整的单元测试"; URL="001-编写完整的单元测试.md"]
-  _2 [label="2.添加目录生成"; URL="002-添加目录生成.md"]
+  _1 [label="1.完全な単体テストを書く"; URL="001-完全な単体テストを書く.md"]
+  _2 [label="2.目次生成の追加"; URL="002-目次生成の追加.md"]
   _1 -> _2 [style="dotted"];
-  _3 [label="3.图形生成"; URL="003-图形生成.md"]
+  _3 [label="3.図形生成"; URL="003-図形生成.md"]
   _2 -> _3 [style="dotted"];
 }
 ```
@@ -159,9 +132,9 @@ e.x. ``adr logs 9``
 ╔════════════╤══════╗
 ║  -         │  -   ║
 ╟────────────┼──────╢
-║ 2017-11-23 │ 提议 ║
+║ 2017-11-23 │ 提案  ║
 ╟────────────┼──────╢
-║ 2017-11-24 │ 通过 ║
+║ 2017-11-24 │ 承認  ║
 ╚════════════╧══════╝
 ```
 
@@ -176,10 +149,10 @@ adr export <type>
 e.x. ``adr export csv``
 
 ```
-Index, 决策, 上次修改时间, 最后状态
-1, 编写完整的单元测试, 2017-11-26, 2017-11-26 已完成
-2, 添加目录生成, 2017-11-26, 2017-11-25 已完成
-3, 图形生成功能, 2017-11-26, 2017-11-24 已完成
+インデックス, 決定, 最終更新日, 最終状態
+1, 完全な単体テストを書く, 2017-11-26, 2017-11-26 完了
+2, 目次生成の追加, 2017-11-26, 2017-11-25 完了
+3, 図形生成機能, 2017-11-26, 2017-11-24 完了
 ```
 
 ### search adr
@@ -192,12 +165,12 @@ e.x. ``adr search 测试``
 
 ```
 ╔══════════════════════╤══════════════════╗
-║ 决策                 │ 最后状态         ║
+║ 決定                 │ 最終状態         ║
 ╟──────────────────────┼──────────────────╢
-║ 19.添加-e2e-测试     │ 2017-11-28 提议  ║
+║ 19. e2e テストの追加 │ 2017-11-28 提案  ║
 ╟──────────────────────┼──────────────────╢
-║ 1.编写完整的单元测试 │ 2017-11-26 完成  ║
-╚══════════════════════╧══════════════════╝
+║ 1. 完全な単体テストを書く │ 2017-11-26 完了 ║
+╚══════════════════════╧══════════════════╝╝
 ```
 
 Config
@@ -218,7 +191,7 @@ example config:
 ```json
 {
   "path":"doc/adr/",
-  "language":"zh-cn",
+  "language":"ja",
   "prefix": "",
   "digits": 4,
   "editor": "code",
