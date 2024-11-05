@@ -35,7 +35,7 @@
     "patch": "npm version patch",
     "minor": "npm version minor",
     "major": "npm version major",
-    "release:npm": "npm publish --access public"
+    "release:npm": "npm publish --access public  --registry=https://registry.npmjs.org/"
   },
   "scripts-info": {
     "info": "Display information about the scripts",
