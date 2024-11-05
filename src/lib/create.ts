@@ -42,7 +42,7 @@ export function create (name: string) {
   mkdirp.sync(savePath)
 
   const filePath = createDecisions(name, savePath)
-  Utils.openInEditor(path.join(process.cwd(), filePath))
+  // Utils.openInEditor(path.join(process.cwd(), filePath))
 
   let toc = generate('toc', { output: false })
   fs.writeFileSync(savePath + 'README.' + fileExt, toc + '\n')

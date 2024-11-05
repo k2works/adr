@@ -48,7 +48,7 @@ A good material about [Architecture decision record](https://github.com/joelpark
 ## Install
 1. install
 ```bash
-npm install -g adr
+npm install -g @k2works/adr
 ```
 2. init
 ```bash
@@ -190,7 +190,7 @@ example config:
 
 ```json
 {
-  "path":"doc/adr/",
+  "path":"docs/adr/",
   "language":"ja",
   "prefix": "",
   "digits": 4,
