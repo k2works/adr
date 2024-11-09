@@ -1,19 +1,29 @@
 # {NUMBER}. {TITLE}
 
+A brief description of the architectural decision
+
 Date: {DATE}
 
 ## Status
 
-{DATE} proposed
+Proposed on {DATE}
 
 ## Context
 
-Context here...
+The circumstances under which this decision was made
 
 ## Decision
 
-Decision here...
+The decision made and the rationale behind it
 
-## Consequences
+## Impact
 
-Consequences here...
+The impact of this decision
+
+## Compliance
+
+How to ensure that this decision is being followed
+
+## Notes
+
+Metadata about this decision (author, etc.)
